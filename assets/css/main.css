@@ -1,0 +1,58 @@
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: #fcfcfc;
+  min-height: 100vh;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+.bg-primary-gradient {
+  background: linear-gradient(135deg, #0d6efd 0%, #0d6efd 100%);
+}
+
+.card {
+  border: none;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-large-fun {
+  border: none;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.btn-large-fun:active:not(:disabled) {
+  transform: scale(0.96) translateZ(0);
+  opacity: 0.9;
+}
+
+/* Fix for blurry elements on some mobile browsers */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container-fluid {
+  max-width: 600px;
+}
+
+@media (max-width: 576px) {
+  .display-4 {
+    font-size: 2.5rem;
+  }
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+}
